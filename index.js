@@ -47,8 +47,12 @@ app.post("/donation", async (req, res) => {
             .setTimestamp();
 
         await channel.send({
-            embeds: [embed]
-        });
+    content: "<@1443364480422776924>",
+    embeds: [embed],
+    allowedMentions: {
+        users: ["1443364480422776924"]
+    }
+});
 
         res.json({
             success: true
